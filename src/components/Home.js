@@ -24,11 +24,11 @@ const Home = () => {
   return (
     <div>
       <div id="indicators-carousel" className="relative w-full" data-carousel="static">
-        <div className="relative h-[150vh] overflow-hidden rounded-lg">
+        <div className="relative h-[150vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute w-full  h-full transition-all duration-1000 ease-in-out`}
+              className={`absolute w-full h-full transition-all duration-1000 ease-in-out`}
               style={{
                 transform: `translateX(${index === currentSlide ? direction === 1 ? '0%' : '0%' : direction === 1 ? '100%' : '-100%'})`,
                 opacity: index === currentSlide ? 1 : 0,
@@ -37,7 +37,7 @@ const Home = () => {
             >
               <img
                 src={slide}
-                className="w-full mt-20 object-contain "
+                className="w-full mt-20 object-contain"
                 alt={`slide-${index}`}
               />
             </div>
@@ -46,7 +46,7 @@ const Home = () => {
         {/* Slider controls */}
         <button
           type="button"
-          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           onClick={handlePrev}
         >
           <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 group-hover:bg-black group-focus:ring-4 group-focus:ring-white">
@@ -70,7 +70,7 @@ const Home = () => {
         </button>
         <button
           type="button"
-          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-1/2 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           onClick={handleNext}
         >
           <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 group-hover:bg-black group-focus:ring-4 group-focus:ring-white">
