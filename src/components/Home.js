@@ -47,7 +47,7 @@ const Home = () => {
         {/* Slider controls */}
         <button
           type="button"
-          className="absolute top-1/2 mt-10 left-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
+          className="absolute top-1/2 mt-10 lg:mt-0 left-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
           onClick={handlePrev}
         >
           <svg
@@ -70,7 +70,7 @@ const Home = () => {
 
         <button
           type="button"
-          className="absolute top-1/2 mt-10 right-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
+          className="absolute top-1/2 mt-10 lg:mt-0 right-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
           onClick={handleNext}
         >
           <svg
