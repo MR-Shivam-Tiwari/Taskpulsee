@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div>
       <div id="indicators-carousel" className="relative w-full" data-carousel="static">
-        <div className="relative h-[150vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
+        <div className="relative h-[50vh]  lg:h-[160vh]  overflow-hidden rounded-lg">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -37,60 +37,58 @@ const Home = () => {
             >
               <img
                 src={slide}
-                className="w-full mt-20 object-contain"
+                className="w-full lg:h-[130vh] h-full mt-10 object-cover"
                 alt={`slide-${index}`}
               />
             </div>
           ))}
         </div>
+
         {/* Slider controls */}
         <button
           type="button"
-          className="absolute top-1/2 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-1/2 mt-10 left-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
           onClick={handlePrev}
         >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 group-hover:bg-black group-focus:ring-4 group-focus:ring-white">
-            <svg
-              className="w-4 h-4 text-white group-hover:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span className="sr-only">Previous</span>
-          </span>
+          <svg
+            className="w-4 h-4 text-white group-hover:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span className="sr-only">Previous</span>
         </button>
+
         <button
           type="button"
-          className="absolute top-1/2 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-1/2 mt-10 right-4 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-gray-500 group hover:bg-black focus:outline-none"
           onClick={handleNext}
         >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-500 group-hover:bg-black group-focus:ring-4 group-focus:ring-white">
-            <svg
-              className="w-4 h-4 text-white group-hover:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </span>
+          <svg
+            className="w-4 h-4 text-white group-hover:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span className="sr-only">Next</span>
         </button>
       </div>
     </div>
